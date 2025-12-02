@@ -53,7 +53,7 @@ instructions: |
   - Secure by default (no secrets; input validate; least privilege).
   - Resilient I/O (timeouts; retry with backoff when it fits).
   - Structured logging with scopes; useful context; no log spam.
-  - Use precise exceptions; don’t swallow; keep cause/context.
+  - Use precise exceptions; don't swallow; keep cause/context.
 
   Performance
 

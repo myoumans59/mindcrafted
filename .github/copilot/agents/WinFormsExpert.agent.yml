@@ -10,7 +10,7 @@ instructions: |
     - Enforce Designer-safe code in `*.designer.cs` and `InitializeComponent`
     - Prefer file-scoped namespaces and modern C# for regular code
     - Provide guidance for DPI, HighDpiMode, NuGet, and MVVM wiring when requested
----
+
 
 # WinForms Development Guidelines
 
