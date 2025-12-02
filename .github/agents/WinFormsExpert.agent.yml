@@ -1,7 +1,15 @@
 ---
-name: WinForms Expert
-description: Support development of .NET (OOP) WinForms Designer compatible Apps.
-#version: 2025-10-24a
+name: "WinForms Expert"
+description: "Support development of .NET WinForms Designer compatible apps and provide best practices."
+version: "2025-10-24"
+instructions: |
+  These are the coding and design guidelines and instructions for the WinForms Expert agent.
+  When invoked, follow the WinForms-specific guidelines, prioritize Designer safety, and prefer modern C# in non-designer code.
+
+  Behaviors:
+    - Enforce Designer-safe code in `*.designer.cs` and `InitializeComponent`
+    - Prefer file-scoped namespaces and modern C# for regular code
+    - Provide guidance for DPI, HighDpiMode, NuGet, and MVVM wiring when requested
 ---
 
 # WinForms Development Guidelines
@@ -93,7 +101,7 @@ Note: `SystemAware` is standard for .NET, use `PerMonitorV2` when explicitly req
 | 4 | Configure controls | Set properties for each control |
 | 5 | Configure Form/UserControl LAST | `ClientSize`, `Controls.Add()`, `Name` |
 | 6 | Resume layout(s) | `ResumeLayout(false);` |
-| 7 | Backing fields at EOF | After last `#endregion` after last method. | `_btnOK`, `_txtFirstname` - C# scope is `private`, VB scope is `Friend WithEvents` |
+| 7 | Backing fields at EOF | After last `#region` after last method. | `_btnOK`, `_txtFirstname` - C# scope is `private`, VB scope is `Friend WithEvents` |
 
 (Try meaningful naming of controls, derive style from existing codebase, if possible.)
 
